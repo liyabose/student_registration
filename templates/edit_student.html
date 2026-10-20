@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Edit Student</title>
+
+    <!-- CSS File -->
+
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+
+</head>
+
+<body>
+
+    <!-- Header -->
+
+    <header>
+
+        <h1>Student Registration System</h1>
+
+    </header>
+
+    <!-- Navigation -->
+
+    <nav>
+
+        <a href="/">Home</a>
+
+        <a href="/add">Add Student</a>
+
+    </nav>
+
+    <!-- Main Container -->
+
+    <div class="container">
+
+        <h2>Edit Student</h2>
+
+        <form>
+
+            <label>Student Name</label>
+
+            <input type="text" value="Rahul">
+
+            <br><br>
+
+            <label>Age</label>
+
+            <input type="number" value="20">
+
+            <br><br>
+
+            <label>Course</label>
+
+            <input type="text" value="Python Full Stack">
+
+            <br><br>
+
+            <button class="editBtn">
+
+                Update Student
+
+            </button>
+
+        </form>
+
+    </div>
+
+    <!-- Footer -->
+
+    <footer>
+
+        <p>Student Registration System ©2026</p>
+
+    </footer>
+
+    <!-- JavaScript -->
+
+    <script src="{{ url_for('static', filename='js/script.js') }}"></script>
+
+</body>
+
+</html>

@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Add Student</title>
+
+    <link rel="stylesheet"
+          href="{{ url_for('static', filename='css/style.css') }}">
+
+</head>
+
+<body>
+
+<header>
+
+<h1>Student Registration System</h1>
+
+</header>
+
+<nav>
+
+<a href="/">Home</a>
+
+<a href="/add">Add Student</a>
+
+</nav>
+
+<div class="container">
+
+<h2>Add Student</h2>
+
+<form action="/save" method="POST">
+
+<label>Name</label>
+
+<input type="text"
+       name="name"
+       placeholder="Enter Name"
+       required>
+
+<br><br>
+
+<label>Age</label>
+
+<input type="number"
+       name="age"
+       placeholder="Enter Age"
+       required>
+
+<br><br>
+
+<label>Course</label>
+
+<input type="text"
+       name="course"
+       placeholder="Enter Course"
+       required>
+
+<br><br>
+
+<button class="addBtn">
+
+Save Student
+
+</button>
+
+</form>
+
+</div>
+
+<footer>
+
+<p>
+
+Student Registration System ©2026
+
+</p>
+
+</footer>
+
+<script src="{{ url_for('static', filename='js/script.js') }}"></script>
+
+</body>
+
+</html>

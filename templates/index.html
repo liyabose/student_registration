@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Student Registration System</title>
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+
+</head>
+
+<body>
+
+    <!-- Header -->
+    <header>
+
+        <h1>Student Registration System</h1>
+
+    </header>
+
+    <!-- Navigation -->
+    <nav>
+
+        <a href="/">Home</a>
+
+        <a href="/add">Add Student</a>
+
+    </nav>
+
+    <!-- Main Content -->
+    <div class="container">
+
+        <h2>Student List</h2>
+
+        <a href="/add">
+            <button class="addBtn">
+                + Add Student
+            </button>
+        </a>
+
+        <table>
+
+            <thead>
+
+                <tr>
+
+                    <th>ID</th>
+
+                    <th>Name</th>
+
+                    <th>Age</th>
+
+                    <th>Course</th>
+
+                    <th>Action</th>
+
+                </tr>
+
+            </thead>
+
+            <tbody>
+
+                {% if students %}
+
+                    {% for student in students %}
+
+                    <tr>
+
+                        <td>{{ student.id }}</td>
+
+                        <td>{{ student.name }}</td>
+
+                        <td>{{ student.age }}</td>
+
+                        <td>{{ student.course }}</td>
+
+                        <td>
+
+                            <button class="editBtn">
+                                Edit
+                            </button>
+
+                            <button class="deleteBtn" onclick="confirmDelete()">
+                                Delete
+                            </button>
+
+                        </td>
+
+                    </tr>
+
+                    {% endfor %}
+
+                {% else %}
+
+                    <tr>
+
+                        <td colspan="5" style="text-align:center;">
+                            No Students Found
+                        </td>
+
+                    </tr>
+
+                {% endif %}
+
+            </tbody>
+
+        </table>
+
+    </div>
+
+    <!-- Footer -->
+    <footer>
+
+        <p>
+            Student Registration System ©2026
+        </p>
+
+    </footer>
+
+    <!-- JavaScript -->
+    <script src="{{ url_for('static', filename='js/script.js') }}"></script>
+
+</body>
+
+</html>
